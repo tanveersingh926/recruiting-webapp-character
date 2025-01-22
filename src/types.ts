@@ -8,3 +8,19 @@ export type Attributes = {
 };
 
 export type Class = "Barbarian" | "Wizard" | "Bard";
+
+export type Skills = {
+    [x: string]: {
+        name: string;
+        attributeModifier: string;
+        points: number;
+    };
+}
+
+export type Character = {
+    id: string;
+    attributes: Attributes;
+    skills: Skills;
+    maximumSkillPoints: number;
+    availableSkillPoints: number;
+};
